@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeWo-direkt - Vacation Rentals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 4rem;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #2b6cb0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+        }
+
+        
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://images.trvl-media.com/lodging/35000000/34070000/34064200/34064182/51fa4b9f.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 4rem;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        
+        .search-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 1200px;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.25rem;
+        }
+
+        .seek-button {
+            background-color: #1a365d;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        
+        .message-banner {
+            background-color: #1a365d;
+            color: white;
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .register-button {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        
+        .accommodations {
+            padding: 2rem 4rem;
+        }
+
+        .accommodations h2 {
+            margin-bottom: 2rem;
+            font-size: 1.875rem;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .property-card {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">FeWo-direkt</a>
+        <nav class="nav-links">
+            <a href="#">Download the app</a>
+            <a href="#">travel planner</a>
+            <a href="#">register accommodation</a>
+            <a href="#">Help</a>
+            <a href="#">My Travels</a>
+            <a href="#">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" >
+            <h1>Alles gut, du buchst bei FeWo-direkt</h1>
+            <form class="search-form">
+                <input type="text" placeholder="Wo soll's hingehen?" class="search-input">
+                <input type="text" placeholder="Nov 23 - Dec 7" class="search-input">
+                <input type="text" placeholder="2 Reisende" class="search-input">
+                <button class="seek-button">Seek</button>
+            </form>
+        </section>
+
+        <div class="message-banner">
+            <p>Sign in to message the host and get more details about a listing.</p>
+            <button class="register-button">Register</button>
+        </div>
+
+        <section class="accommodations">
+            <h2>Find accommodations to suit your taste</h2>
+            <div class="property-grid">
+                <div class="property-card">
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2024/03/06/VRBO_OOH_TRUST_LISBON_HOUSE_NATACHA_WIDE_BACKDOOR_HUMM_0004.jpg" alt="Luxury villa with pool">
+                </div>
+                <div class="property-card">
+                    <img src="https://images.trvl-media.com/lodging/25000000/24260000/24255900/24255807/b74da58a.jpg" alt="Modern city apartment">
+                </div>
+                <div class="property-card">
+                    <img src="https://images.trvl-media.com/lodging/34000000/33620000/33610300/33610215/8ca9845e.jpg" alt="Mountain cabin">
+                </div>
+                <div class="property-card">
+                    <img src="https://images.trvl-media.com/lodging/34000000/33710000/33701700/33701673/bd2f6057.jpg" alt="Thatched cottage">
+                </div>
+                <div class="property-card">
+                    <img src="https://images.trvl-media.com/lodging/45000000/44450000/44444600/44444524/120ff187.jpg" alt="Lake house">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
